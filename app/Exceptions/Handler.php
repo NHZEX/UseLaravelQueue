@@ -6,12 +6,12 @@
  * Time: 18:54
  */
 
-namespace App;
+namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Contracts\Debug\ExceptionHandler as DebugExceptionHandler;
 
-class ExceptionHandler implements DebugExceptionHandler
+class Handler implements DebugExceptionHandler
 {
 
     /**

@@ -6,23 +6,15 @@
  * Time: 11:35
  */
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/App2.php';
 
-use App\ExceptionHandler as MyExceptionHandler;
+use App\Exceptions\Handler as MyExceptionHandler;
 use Illuminate\Config\Repository;
 use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Contracts\Foundation\Application;
 
+/** @var Application $app */
+$app = require_once __DIR__.'/bootstrap/app.php';
 
-$app = new App2(__DIR__);
-// 绑定接口
-$app->singleton(
-    Illuminate\Contracts\Console\Kernel::class,
-    App\Console\Kernel::class
-);
-$app->singleton(
-    Illuminate\Contracts\Debug\ExceptionHandler::class,
-    MyExceptionHandler::class
-);
 // 注册实例
 $app->instance(ExceptionHandler::class, new MyExceptionHandler());
 $app->instance('config', new Repository([

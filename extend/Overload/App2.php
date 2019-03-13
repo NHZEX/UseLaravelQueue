@@ -1,4 +1,5 @@
 <?php
+namespace Extend\Overload;
 
 use Illuminate\Events\EventServiceProvider;
 
