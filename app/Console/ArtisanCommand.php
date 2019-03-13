@@ -26,12 +26,15 @@ class ArtisanCommand extends ArtisanServiceProvider
             $this->devCommands['ControllerMake'],
             $this->devCommands['MiddlewareMake'],
             $this->devCommands['NotificationMake'],
-            $this->devCommands['NotificationTable']
+            $this->devCommands['NotificationTable'],
+            $this->devCommands['SessionTable']
         );
     }
 
     protected function registerClearResetsCommand(){}
 
     protected function registerRouteListCommand(){}
+
+    protected function registerSessionTableCommand(){}
 
 }
