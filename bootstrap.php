@@ -7,16 +7,13 @@
  */
 require_once __DIR__ . '/vendor/autoload.php';
 
-use App\Exceptions\Handler as MyExceptionHandler;
 use Illuminate\Config\Repository;
-use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Contracts\Foundation\Application;
 
 /** @var Application $app */
 $app = require_once __DIR__.'/bootstrap/app.php';
 
 // 注册实例
-$app->instance(ExceptionHandler::class, new MyExceptionHandler());
 $app->instance('config', new Repository([
     'database' => [
         'redis' => [

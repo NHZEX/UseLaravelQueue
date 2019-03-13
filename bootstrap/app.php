@@ -6,7 +6,6 @@
  * Time: 14:17
  */
 
-use App\Exceptions\Handler as MyExceptionHandler;
 use Extend\Overload\App2;
 
 $app = new App2(dirname(__DIR__));
@@ -18,7 +17,7 @@ $app->singleton(
 );
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    MyExceptionHandler::class
+    App\Exceptions\Handler::class
 );
 
 return $app;
