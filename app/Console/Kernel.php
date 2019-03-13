@@ -41,6 +41,11 @@ class Kernel extends ConsoleKernel
         require $this->basePath('routes/console.php');
     }
 
+    /**
+     * 补丁
+     * @param string $path
+     * @return string
+     */
     private function basePath($path = '')
     {
         return $this->app->basePath().($path ? DIRECTORY_SEPARATOR.$path : $path);

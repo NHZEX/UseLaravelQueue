@@ -26,11 +26,9 @@ $app = require_once __DIR__ . '/bootstrap.php';
 | or another output device for the developers. Here goes nothing!
 |
 */
-///** @var \Illuminate\Foundation\Console\Kernel $kernel */
+
 /** @var App\Console\Kernel $kernel */
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
-var_dump(get_class($app));
-var_dump(get_class($kernel));
 
 $status = $kernel->handle(
     $input = new Symfony\Component\Console\Input\ArgvInput,

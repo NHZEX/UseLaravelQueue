@@ -5,10 +5,11 @@
  * Date: 2019/3/13
  * Time: 14:17
  */
+
 use App\Exceptions\Handler as MyExceptionHandler;
 use Extend\Overload\App2;
 
-$app = new App2(__DIR__);
+$app = new App2(dirname(__DIR__));
 
 // 绑定接口
 $app->singleton(

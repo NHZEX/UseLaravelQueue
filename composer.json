@@ -1,14 +1,17 @@
 {
     "type": "project",
     "require": {
+        "php": "~7.1",
         "illuminate/queue": "~5.7.28",
         "illuminate/redis": "~5.7.28",
         "illuminate/config": "~5.7.28",
         "laravel-zero/foundation": "~5.7.21",
         "illuminate/events": "~5.7.28",
         "illuminate/bus": "~5.7.28",
-        "laravel/horizon": "^3.0",
-        "vlucas/phpdotenv": "^2.2"
+        "vlucas/phpdotenv": "^2.2",
+        "illuminate/http": "~5.7.28",
+        "illuminate/translation": "~5.7.28",
+        "illuminate/cache": "~5.7.28"
     },
     "autoload": {
         "psr-4": {

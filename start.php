@@ -7,14 +7,11 @@
  * Time: 15:24
  */
 
-use Illuminate\Contracts\Debug\ExceptionHandler;
+use App\Jobs\Test as Test;
 use Illuminate\Queue\Capsule\Manager as Queue;
 use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
-use Illuminate\Queue\Worker;
-use Illuminate\Queue\WorkerOptions;
-use App\Jobs\Test as Test;
 
 /** @var \Illuminate\Foundation\Application $app */
 $app = require_once __DIR__ . '/bootstrap.php';
@@ -60,8 +57,8 @@ var_dump($queue->size());
 /** @var \Illuminate\Events\Dispatcher $events */
 $events = $app['events'];
 
-$worker = new Worker($queue, $events, $app[ExceptionHandler::class]);
-$options = new WorkerOptions();
-$options->maxTries = 5;
-$options->timeout = 300;
-$worker->daemon('redis', 'default', $options);
+//$worker = new Worker($queue, $events, $app[ExceptionHandler::class]);
+//$options = new WorkerOptions();
+//$options->maxTries = 5;
+//$options->timeout = 300;
+//$worker->daemon('redis', 'default', $options);
