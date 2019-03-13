@@ -1,7 +1,11 @@
 {
+    "name": "nhzex/laravel-queue",
+    "description": "独立调用laravel队列组件",
+    "keywords": [],
+    "license": "MIT",
     "type": "project",
     "require": {
-        "php": "~7.1",
+        "php": "^7.1.3",
         "illuminate/queue": "~5.7.28",
         "illuminate/redis": "~5.7.28",
         "illuminate/config": "~5.7.28",
@@ -25,5 +29,7 @@
             "type": "composer",
             "url": "https://packagist.laravel-china.org"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
